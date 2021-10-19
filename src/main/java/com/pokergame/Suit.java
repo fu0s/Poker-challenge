@@ -50,4 +50,8 @@ public enum Suit {
     public String getEntryCode() {
         return entryCode;
     }
+
+    public int getEvaluationValue() {
+        return evaluationValue;
+    }
 }

@@ -58,8 +58,8 @@ public class Game {
             }
             return null;
         }).collect(Collectors.toList());
-        if (cards.size() < 5){
-            throw new PokerException("Number of cards is " + cards.size() + ". The acceptable number of cards is 5." );
+        if (cards.size() != 5 ){
+            throw new PokerException("Number of cards is " + cards.size() + " for hand " + cards.toString() + ". The acceptable number of cards is 5.");
         }
         return cards;
     }

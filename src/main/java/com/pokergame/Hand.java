@@ -286,6 +286,28 @@ public class Hand {
     }
 
     /**
+     * "equals"
+     * @param o Object
+     * @return if two hands are equal true,if not false.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Hand hand = (Hand) o;
+        return Objects.equals(cards, hand.cards) && Objects.equals(rank, hand.rank) && Objects.equals(winningCard, hand.winningCard);
+    }
+
+    /**
+     * "hashCode" was added since equals was overriden
+     * @return a hshcode of card
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(cards, rank, winningCard);
+    }
+
+    /**
      *
      * @param other
      * @return
